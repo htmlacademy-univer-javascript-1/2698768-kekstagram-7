@@ -21,10 +21,10 @@ export function makeNumber(str) {
   let digits = '';
 
   for(let i = 0; i < str.length; i++){
-    if (!Number.isNaN(parseInt(str[i]))){
+    if (!Number.isNaN(parseInt(str[i], 10))){
       digits+= str[i];
     }
   }
-  return parseInt(digits);
+  return parseInt(digits, 10);
 }
 
