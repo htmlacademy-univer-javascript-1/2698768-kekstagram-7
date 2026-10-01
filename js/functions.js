@@ -28,3 +28,18 @@ export function makeNumber(str) {
   return parseInt(digits, 10);
 }
 
+
+function makeHoursInMinutes(str) {
+  const [hours, minutes] = str.split(':').map(Number);
+  return hours * 60 + minutes;
+}
+/* eslint-disable no-unused-vars */
+function isMeetingInWorkday(workStart, workEnd, meetingStart, meetingDuration) {
+  const workStartMin = makeHoursInMinutes(workStart);
+  const workEndMin = makeHoursInMinutes(workEnd);
+  const meetingStartMin = makeHoursInMinutes(meetingStart);
+  const meetingEndMin = meetingStartMin + meetingDuration;
+
+  return (meetingStartMin >= workStartMin && meetingEndMin <= workEndMin);
+}
+
