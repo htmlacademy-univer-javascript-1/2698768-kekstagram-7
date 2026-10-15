@@ -1,5 +1,5 @@
-import { getRandomInteger } from './utils';
-import { createComments } from './comments';
+import { getRandomInteger } from './utils.js';
+import { createComments } from './comments.js';
 
 
 const createPhoto = (index) => {
