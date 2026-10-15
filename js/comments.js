@@ -1,6 +1,6 @@
-import { getRandomInteger, getRandomElement } from './utils';
+import { getRandomInteger, getRandomElement } from './utils.js';
 
-import { commentText, names } from './data';
+import { commentText, names } from './data.js';
 
 
 let commentId = 0;
