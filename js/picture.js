@@ -1,7 +1,12 @@
+import { showBigPicture } from './big-picture.js';
+
 const picture = document.querySelector('#picture').content;
 
 const createPicture = (photo) => {
   const pictureElement = picture.cloneNode(true);
+
+  const cardLink = pictureElement.querySelector('.picture');
+
   const image = pictureElement.querySelector('.picture__img');
   image.src = photo.url;
   image.alt = photo.description;
@@ -11,6 +16,13 @@ const createPicture = (photo) => {
 
   const likes = pictureElement.querySelector('.picture__likes');
   likes.textContent = photo.likes;
+
+
+  cardLink.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    showBigPicture(photo);
+  });
 
   return pictureElement;
 };
