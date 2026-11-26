@@ -1,3 +1,6 @@
+import { resetScale } from './scale.js';
+import { resetEffects } from './effects.js';
+
 const uploadForm = document.querySelector('.img-upload__form');
 const uploadInput = uploadForm.querySelector('.img-upload__input');
 const uploadOverlay = uploadForm.querySelector('.img-upload__overlay');
@@ -14,6 +17,7 @@ const pristine = new Pristine(uploadForm, {
 const openUploadForm = () => {
   uploadOverlay.classList.remove('hidden');
   document.body.classList.add('modal-open');
+  resetScale();
 };
 
 const closeUploadForm = () => {
@@ -27,6 +31,7 @@ const closeUploadForm = () => {
   if (pristine) {
     pristine.reset();
   }
+  resetEffects();
 };
 
 uploadInput.addEventListener('change', () => {
