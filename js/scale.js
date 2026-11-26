@@ -14,14 +14,14 @@ const changeScale = (num) => {
 };
 
 scaleSmaller.addEventListener('click', () => {
-  const currentValue = parseInt(scaleValue.value, 10)
-  const newValue = Math.max(currentValue - SCALE_STEP, MIN_SCALE)
+  const currentValue = parseInt(scaleValue.value, 10);
+  const newValue = Math.max(currentValue - SCALE_STEP, MIN_SCALE);
   changeScale(newValue);
 });
 
 scaleBigger.addEventListener('click', () => {
-  const currentValue = parseInt(scaleValue.value, 10)
-  const newValue = Math.min(currentValue + SCALE_STEP, MAX_SCALE)
+  const currentValue = parseInt(scaleValue.value, 10);
+  const newValue = Math.min(currentValue + SCALE_STEP, MAX_SCALE);
   changeScale(newValue);
 });
 
